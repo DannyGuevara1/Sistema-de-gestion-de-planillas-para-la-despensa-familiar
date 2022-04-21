@@ -1,0 +1,27 @@
+:root{
+    --primario:#61A530;
+    --secudario:#F2C800;
+    --terciario:#D5141B;
+    --blanco:#FFFFFF;
+    --negro:#000000;
+    --fondo:#e2e9f7;
+}
+.header_nav-links_active_page{
+    background-color: var(--blanco);
+    width: 90%;
+    height: 47px;
+    position: absolute;
+    left: 0;
+    top: 52.4%;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0,4);
+    
+}
+.header_nav-links li:nth-child(4) a{
+    color: var(--terciario);
+}
+/** Estilos del contenido principal de registro de asistencia**/
+.main-asistencia{
+    margin-left: 390px;
+}
