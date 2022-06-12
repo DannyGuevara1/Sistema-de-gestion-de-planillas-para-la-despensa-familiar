@@ -6,6 +6,10 @@
     --negro:#000000;
     --fondo:#e2e9f7;
 }
+.tabla{
+    font-size: 10px;
+}
+
 .header_nav-links_active_page{
     background-color: var(--blanco);
     width: 90%;
@@ -23,4 +27,212 @@
 /** Estilos del contenido principal de gestion de planillas**/
 .main-planillas{
     margin-left: 390px;
+}
+.main-planillas_nav{
+    padding: 2rem 2rem 0 2rem;
+    height: 300px;
+    background-color: var(--fondo);
+    position: relative;
+    z-index: 3;
+}
+.main-planillas_container{
+    min-height: calc(76vh - 80px);
+    padding: 2rem 1.5rem;
+    background-color: var(--fondo);
+    
+}
+.tabla{
+    margin-top: 3.5rem;
+    display:grid;
+    grid-template-columns: 100% auto;
+    position: relative;
+    z-index: 4;
+    transition: all .3s ease;
+    top: -280px;
+    
+}
+.tabla_usuarios-solo{
+    background: var(--blanco);
+    display: grid;
+    border-radius: 5px;
+    margin-top: 5px;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+}
+.tabla_usuarios-encabezado,
+.tabla_usuarios-cuerpo{
+    padding: 10px;
+}
+
+.tabla_usuarios input[type="text"]{
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 40px;
+    width: 500px;
+}
+.tabla_usuarios input[type="submit"]{
+    height: 40px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(235,214,113);
+    background: linear-gradient(90deg, rgba(235,214,113,1) 0%, rgba(250,237,174,1) 0%, rgba(184,157,28,1) 100%);
+    color: var(--blanco);
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.tabla_usuarios input[type="submit"]:hover{
+    background: linear-gradient(90deg, rgba(184,157,28,1) 0%, rgba(235,214,113,1) 100%);
+    opacity: 1;
+}
+.tabla_usuarios p{
+    width: 45%;
+    position: relative;
+    bottom: 46px;
+}
+
+.tabla_usuarios-encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead td{
+    font-weight: bold;
+    color: #FF8AAE;
+    height: 40px;
+    padding: 10px 0;
+}
+thead tr{
+    background-color: #F7F7F7;
+    width: 100%;
+}
+tbody td{
+    font-size: .7rem;
+    padding: 10px 0;
+}
+
+/** Modal **/
+.modalAgregar{
+    background-color: var(--primario);
+    color: var(--terciario);
+    width: auto;
+   /** position:absolute;  **/ 
+    z-index: 5;
+}
+/** Popup **/
+#popup{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    margin: auto;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(245, 245, 245,0.9);
+    border-radius: 5px;
+    
+    border: none;
+}
+#popup .FormAgregar p{
+    margin-top: 30px;
+}
+#popup .FormAgregar p label{
+    color: #9BA4B4;
+}
+#popup_ac{
+    
+    position: absolute;
+    top: 0%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    margin: auto;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(245, 245, 245,0.9);
+    border-radius: 5px;
+    
+    border: none;
+}
+#popup_ac .FormAgregar p{
+    margin-top: 30px;
+}
+#popup_ac .FormAgregar p label{
+    color: #9BA4B4;
+}
+.FormAgregar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.FormAgregar h2{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.SelectAgregar{
+    width: 300px;
+    height: 40px;
+    margin-top: 30px;
+}
+.btnAgregar{
+    width: 49.3%;
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    margin-top: 50px;
+    background: rgb(235,214,113);
+    background: linear-gradient(90deg, rgba(235,214,113,1) 0%, rgba(250,237,174,1) 0%, rgba(184,157,28,1) 100%);
+    color: var(--blanco);
+}
+.open{
+    position: relative;
+    z-index: 4;
+    top: -230px;
+    left: 900px;
+    width: 10%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(0,255,221);
+    background: linear-gradient(90deg, rgba(0,255,221,1) 0%, rgba(63,204,185,1) 48%, rgba(3,166,144,1) 100%);
+    color: var(--blanco);
+    opacity: 0.6;
+    transition: 0.5s;
+}
+.open:hover{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    opacity: 1;
+}
+.btnModificar{
+    height: 30px;
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    width: 75px;
+    background: rgb(66,194,255);
+    background: linear-gradient(90deg, rgba(66,194,255,1) 0%, rgba(47,159,212,1) 48%, rgba(15,95,134,1) 100%);
+    padding: 5px;
+}
+.btnEliminar{
+    height: 30px;
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    width: 65px;
+    background: rgb(232,58,20);
+    background: linear-gradient(90deg, rgba(232,58,20,1) 0%, rgba(226,51,13,1) 50%, rgba(158,39,13,1) 100%);
+    padding: 5px;
 }

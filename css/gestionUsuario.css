@@ -9,6 +9,9 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+.main-admin h2{
+    background-color: var(--fondo);
+}
 *{
     margin: 0;
     padding: 0;
@@ -142,15 +145,14 @@ tbody td{
 #popup{
     display: none;
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 0%;
+    left: 0;
     right: 50%;
     bottom: 0;
     margin: auto;
     z-index: 5;
-    width: 500px;
-    height: 500px;
-    background-color: #f5f5f5;
+    width: 100%;
+    background-color: rgba(245, 245, 245,0.9);
     border-radius: 5px;
     border: none;
 }
@@ -161,16 +163,15 @@ tbody td{
     color: #9BA4B4;
 }
 #popup_ac{
-    z-index: 5;
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 0%;
+    left: 0;
     right: 50%;
     bottom: 0;
     margin: auto;
-    width: 500px;
-    height: 500px;
-    background-color: #f5f5f5;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(245, 245, 245,0.9);
     border-radius: 5px;
     border: none;
 }

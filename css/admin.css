@@ -1,0 +1,23 @@
+:root{
+    --primario:#61A530;
+    --secudario:#F2C800;
+    --terciario:#D5141B;
+    --blanco:#FFFFFF;
+    --negro:#000000;
+    --fondo:#e2e9f7;
+}
+html{
+    background-color: var(--fondo);
+    
+    background-image: url(https://i0.wp.com/codigoespagueti.com/wp-content/uploads/2020/04/Mama-Lucha-Operador-de-Telefonia.jpg?fit=1182%2C800&quality=80&ssl=1);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    height: 100vh;
+}
+.main-admin{
+    margin-left: 390px;
+    background-color: var(--fondo);
+}
+
