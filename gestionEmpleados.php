@@ -132,12 +132,12 @@ require('admin.php');
 
                                     <div class="inputclass">
                                         <span class="dato"> Nombres: </span>
-                                        <input class="inputAgregar" type="text" required name="nombre" id="Nombre">
+                                        <input class="inputAgregar" type="text" required name="nombre" id="Nombre" pattern="[A-Za-z]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato"> Apellidos: </span>
-                                        <input type="text" required name="apellido" id="Apellido">
+                                        <input type="text" required name="apellido" id="Apellido" pattern="[A-Za-z]+"/>
                                     </div>
 
                                     <div class="inputclass">
@@ -147,36 +147,60 @@ require('admin.php');
 
                                     <div class="inputclass">
                                         <span class="dato">Dui:</span>
-                                        <input type="text" required name="dui" id="Dui">
+                                        <input type="text" required name="dui" id="Dui" maxlength="10" pattern="[0-9]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Telefono:</span>
-                                        <input type="text" required name="telefono" id="Telefono">
+                                        <input type="number" required name="telefono" id="Telefono" maxlength="8" pattern="[0-9]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Salario:</span>
-                                        <input type="text" required name="salario" id="Salario"">
+                                        <input type="number" required name="salario" id="Salario" >
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Empl:</span>
-                                        <input type="number" required name="empl" id="Empl">
+                                        <input type="number" required name="empl" id="Empl" maxlength="8" minlength="1">
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Cargo del Empleado:</span>
                                         <select name="cargo" id="Cargo">
-                                            <option value="Cajero" >Cajero</option>
-                                            <option value="Vigilante">Vigilante</option>
-                                            <option value="Vendedor">Vendedor</option>
-                                            <option value="Ordenanza">Ordenansa</option>
-                                            <option value="Auxiliares de tienda">Auxiliares de tienda
+                                            <option value="Cajero">
+                                                Cajero
                                             </option>
-                                            <option value="Axuliares de carnes">Axuliares de carnes</option>
-                                            <option value="Coordinadores">Coordinadores</option>
-                                            <option value="Gerente">Gerente</option>
+                                            <option value="Vigilante">
+                                                Vigilante
+                                            </option>
+                                            <option value="Vendedor de piso">
+                                                Vendedor de piso
+                                            </option>
+                                            <option value="Encargado de frutas y verduras">
+                                                Encargado de frutas y verduras
+                                            </option>
+                                            <option value="Encargado de panaderia">
+                                                Encargado de panaderia
+                                            </option>
+                                            <option value="Encargado de lacteos">
+                                                Encargado de lacteos
+                                            </option>
+                                            <option value="Encargado de alimentos perecederos">
+                                                Encargado de alimentos perecederos
+                                            </option>
+                                            <option value="Jefe de departamento">
+                                                Jefe de departamento
+                                            </option>
+                                            <option value="Sub jefe de departamento">
+                                                Sub jefe de departamento
+                                            </option>
+                                            <option value="Gerente">
+                                                Gerente
+                                            </option>
+                                            <option value="Sub Gerente">
+                                                Sub Gerente
+                                            </option>
                                         </select>
                                     </div>
 
@@ -204,9 +228,9 @@ require('admin.php');
                                 </div>
 
                                 <div class="generodiv " name="genero" id="Genero">
-                                    <input type="radio" name="genero" value="Hombre" id="pt-1">
-                                    <input type="radio" name="genero" value="Mujer" id="pt-2">
-                                    <input type="radio" name="genero" value="No definido" id="pt-3">
+                                    <input type="radio" name="genero" value="Hombre" id="pt-1" class="r1">
+                                    <input type="radio" name="genero" value="Mujer" id="pt-2" class="r1">
+                                    <input type="radio" name="genero" value="No definido" id="pt-3" class="r1">
 
                                     <span class="tituloGen">Genero</span>
 
@@ -313,12 +337,12 @@ require('admin.php');
                                 
                                     <div class="inputclass">
                                         <span class="dato"> Nombres: </span>
-                                        <input class="inputAgregar" type="text" required name="nombre" id="Nombre"  value="<?php echo $obj->nombre;?>">
+                                        <input class="inputAgregar" type="text" required name="nombre" id="Nombre"  value="<?php echo $obj->nombre;?>" pattern="[A-Za-z]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato"> Apellidos: </span>
-                                        <input type="text" required name="apellido" id="Apellido"  value="<?php echo $obj->apellido;?>">
+                                        <input type="text" required name="apellido" id="Apellido"  value="<?php echo $obj->apellido;?>" pattern="[A-Za-z]+"/>
                                     </div>
 
                                     <div class="inputclass">
@@ -328,51 +352,63 @@ require('admin.php');
 
                                     <div class="inputclass">
                                         <span class="dato">Dui:</span>
-                                        <input type="text" required name="dui" id="Dui"  value="<?php echo $obj->dui;?>">
+                                        <input type="text" required name="dui" id="Dui"  value="<?php echo $obj->dui;?>" pattern="[0-9]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Telefono:</span>
-                                        <input type="text" required name="telefono" id="Telefono"  value="<?php echo $obj->tel;?>">
+                                        <input type="text" required name="telefono" id="Telefono"  value="<?php echo $obj->tel;?>" maxlength="8" pattern="[0-9]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Salario:</span>
-                                        <input type="text" required name="salario" id="Salario"  value="<?php echo $obj->salario;?>">
+                                        <input type="text" required name="salario" id="Salario"  value="<?php echo $obj->salario;?>" maxlength="10" pattern="[0-9]+"/>
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Empl:</span>
-                                        <input type="number" required name="empl" id="Empl"  value="<?php echo $obj->empl;?>">
+                                        <input type="number" required name="empl" id="Empl"  value="<?php echo $obj->empl;?>" maxlength="8" minlength="1">
                                     </div>
 
                                     <div class="inputclass">
                                         <span class="dato">Cargo del Empleado:</span>
                                         <select name="cargo" id="Cargo">
-                                            <option value="Cajero" <?php if($obj->cargo == "Cajero") echo "selected"?>>
+                                        <option value="Cajero" <?php if($obj->cargo == "Cajero") echo "selected"?>>
                                                 Cajero</option>
                                             <option value="Vigilante"
                                                 <?php if($obj->cargo == "Vigilante") echo "selected"?>>Vigilante
                                             </option>
-                                            <option value="Vendedor"
-                                                <?php if($obj->cargo == "Vendedor") echo "selected"?>>Vendedor
+                                            <option value="Vendedor de piso"
+                                                <?php if($obj->cargo == "Vendedor de piso") echo "selected"?>>Vendedor de piso
                                             </option>
-                                            <option value="Ordenanza"
-                                                <?php if($obj->cargo == "Ordenanza") echo "selected"?>>Ordenansa
+                                            <option value="Encargado de frutas y verduras"
+                                                <?php if($obj->cargo == "Encargado de frutas y verduras") echo "selected"?>>Encargado de frutas y verduras
                                             </option>
-                                            <option value="Auxiliares de tienda"
-                                                <?php if($obj->cargo == "Auxiliares de tienda") echo "selected"?>>
-                                                Auxiliares de tienda
+                                            <option value="Encargado de panaderia"
+                                                <?php if($obj->cargo == "Encargado de panaderia") echo "selected"?>>
+                                                Encargado de panaderia
                                             </option>
-                                            <option value="Axuliares de carnes"
-                                                <?php if($obj->cargo == "Axuliares de carnes") echo "selected"?>>
-                                                Axuliares de carnes
+                                            <option value="Encargado de lacteos"
+                                                <?php if($obj->cargo == "Encargado de lacteos") echo "selected"?>>
+                                                Encargado de lacteos
                                             </option>
-                                            <option value="Coordinadores"
-                                                <?php if($obj->cargo == "Coordinadores") echo "selected"?>>
-                                                Coordinadores</option>
+                                            <option value="Encargado de alimentos perecederos"
+                                                <?php if($obj->cargo == "Encargado de alimentos perecederos") echo "selected"?>>
+                                                Encargado de alimentos perecederos
+                                            </option>
+                                            <option value="Jefe de departamento"
+                                                <?php if($obj->cargo == "Jefe de departamento") echo "selected"?>>
+                                                Jefe de departamento
+                                            </option>
+                                            <option value="Sub jefe de departamento"
+                                                <?php if($obj->cargo == "Sub jefe de departamento") echo "selected"?>>
+                                                Sub jefe de departamento
+                                            </option>
                                             <option value="Gerente"
                                                 <?php if($obj->cargo == "Gerente") echo "selected"?>>Gerente
+                                            </option>
+                                            <option value="Sub Gerente"
+                                                <?php if($obj->cargo == "Sub Gerente") echo "selected"?>>Sub Gerente
                                             </option>
                                         </select>
                                     </div>
@@ -467,8 +503,8 @@ require('admin.php');
                                         <td>Dui</td>
                                         <td>Tel</td>
                                         <td>Empl</td>
-                                        <td>Salario</td>
-                                        <td>Cargo</td>
+                                        
+                                        
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -498,8 +534,6 @@ require('admin.php');
                                                     <td>".$result -> dui."</td>
                                                     <td>".$result -> tel."</td>
                                                     <td>".$result -> empl."</td>
-                                                    <td>".$result -> salario."</td>
-                                                    <td>".$result -> cargo."</td>
                                                     <td>
                                                     <form  method='POST' action='".$_SERVER['PHP_SELF']."'>
                                                     <input type='hidden' name='id' value='".$result -> id."'>
@@ -534,8 +568,6 @@ require('admin.php');
                                                 <td>".$result -> dui."</td>
                                                 <td>".$result -> tel."</td>
                                                 <td>".$result -> empl."</td>
-                                                <td>".$result -> salario."</td>
-                                                <td>".$result -> cargo."</td>
                                                 <td>
                                                 <form method='POST' action='".$_SERVER['PHP_SELF']."'>
                                                 <input type='hidden' name='id' value='".$result -> id."'>

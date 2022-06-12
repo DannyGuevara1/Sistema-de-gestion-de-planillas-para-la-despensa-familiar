@@ -15,6 +15,19 @@
     <!-- inicia contindo principal -->
     <div class="main-asistencia">
         <h1>Registro de asistencia</h1>
+        <?php
+        
+        date_default_timezone_set("America/El_Salvador");
+
+        $fechaHoy=date("Y-m-d h:i:s");
+        $fecha_e = $fechaHoy;
+        $nombre;
+        if(isset($_POST['nombreUser_in'])){
+            $nombre = $_POST['nombreUser_in'];
+            //echo  "se registro la hora de salida de ",$nombre, " a la hora de " , $fechaHoy;
+        }
+        echo "la hora de entrada de ",$nombre , " fue a la hora de ",$fechaHoy;
+        ?>
     </div>
 </body>
 </html>

@@ -29,6 +29,7 @@
     <title>Empleado</title>
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/empleado.css">
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +47,7 @@
 
             <ul class="header_nav-links">
                 <!-- lista  -->
-                <li><a href="#"><i class="fa-solid fa-calendar-days"></i><p>Registro de asistencia</p></a></li>
+                <li><a href="asistencia-empleado.php"><i class="fa-solid fa-calendar-days"></i><p>Registro de asistencia</p></a></li>
                 <!-- boton  de cerrar sesion -->
                 <div class="header_nav-links_active"></div>
                 <form action="admin.php" method="POST">

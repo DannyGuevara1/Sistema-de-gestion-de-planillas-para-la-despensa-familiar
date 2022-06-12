@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de usuarios</title>
     <link rel="stylesheet" href="./css/gestionUsuario.css">
+    <link rel="stylesheet" href="./css/form.css">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
         integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <?php
+<?php
 require('admin.php');
 ?>
     <div class="main-usuarios">
@@ -99,29 +100,44 @@ require('admin.php');
             </button>
 
             <div id="popup">
-                <div class="FormAgregar">
-                    <h2>Registro</h2>
-                    <form action="gestionUsuario.php" method="post">
-                        <p>
-                            <input type="hidden" name="id">
-                        </p>
-                        <p>
-                            <label for="username">Nombre de usuario</label>
-                            <input class="inputAgregar" type="text" name="username" id="Username">
-                        </p>
-                        <p>
-                            <label for="password">Contraseña</label>
-                            <input class="inputAgregar" type="text" name="password" id="Password">
-                        </p>
+                <div class="containerForm">
+                    <div class="contenidoF">
+                        <div class="titulo">Datos Del Usuario</div>
 
-                        <select class="SelectAgregar" name="rol" id="Rol">
-                            <option value="1">Administrador</option>
-                            <option value="2">Empeado</option>
-                        </select>
+                        <div class="contenidoDF">
+                            <form action="gestionUsuario.php" method="post">
 
-                        <input class="btnAgregar" type="submit" value="Agregar" name="agregar">
-                        <input class="btnAgregar" type="button" value="Cerrar" id="close">
-                    </form>
+                                <div class="detalles">
+
+                                    <input type="hidden" name="id">
+
+                                    <div class="inputclass">
+                                        <span class="dato"> Usuario </span>
+                                        <input class="inputAgregar" required type="text" name="username" id="Username" pattern="[A-Za-z]+"/>
+                                    </div>
+
+                                    <div class="inputclass">
+                                        <span class="dato"> Contraseña </span>
+                                        <input class="inputAgregar" required type="text" name="password" id="Password">
+                                    </div>
+
+                                    <div class="inputclass">
+                                        <span class="dato">Rol del Usuario:</span>
+                                        <select class="SelectAgregar" required name="rol" id="Rol">
+                                            <option value="1">Administrador</option>
+                                            <option value="2">Empeado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <input class="icono" type="submit" value="Registrar" name="agregar">
+                                    <input class="icono" type="button" value="Cerrar" id="close">
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- inicia la funicon actualizar o editar -->
@@ -168,32 +184,48 @@ require('admin.php');
             ?>
             <!-- Inicia formulario agregar-->
             <div id="popup_ac">
-                <div class="FormAgregar">
-                    <h2>Actualizar</h2>
-                    <form action="gestionUsuario.php" method="post">
-                        <p>
-                            <input type="hidden" name="id" value="<?php echo $obj->id;?>">
-                        </p>
+                <div class="containerForm">
+                    <div class="contenidoF">
+                        <div class="titulo">Datos Del Usuario</div>
 
-                        <p>
-                            <label for="username">Nombre de usuario</label>
-                            <input class="inputAgregar" type="text" name="username" id="Username"
-                                value="<?php echo $obj->username;?>">
-                        </p>
-                        <p>
-                            <label for="password">Contraseña</label>
-                            <input class="inputAgregar" type="text" name="password" id="Password"
-                                value="<?php echo $obj->password;?>">
-                        </p>
+                        <div class="contenidoDF">
+                            <form action="gestionUsuario.php" method="post">
 
-                        <select class="SelectAgregar" required name="rol" id="Rol">
-                            <option value="1" <?php if($obj->rol_id == "1") echo "selected"?>>Administrador</option>
-                            <option value="2" <?php if($obj->rol_id == "2") echo "selected"?>>Empeado</option>
-                        </select>
+                                <div class="detalles">
 
-                        <input class="btnAgregar" type="submit" value="Actualizar" name="actualizar">
-                        <input class="btnAgregar" type="button" value="Cerrar" id="close_ac">
-                    </form>
+                                    <input type="hidden" name="id" value="<?php echo $obj->id;?>">
+
+                                    <div class="inputclass">
+                                        <span class="dato"> Usuario </span>
+                                        <input class="inputAgregar" required type="text" name="username" id="Username"
+                                            value="<?php echo $obj->username;?>" pattern="[A-Za-z]+"/>
+                                    </div>
+
+                                    <div class="inputclass">
+                                        <span class="dato"> Contraseña </span>
+                                        <input class="inputAgregar" required type="text" name="password" id="Password"
+                                            value="<?php echo $obj->password;?>">
+                                    </div>
+
+                                    <div class="inputclass">
+                                        <span class="dato">Rol del Usuario:</span>
+                                        <select class="SelectAgregar" required name="rol" id="Rol">
+                                            <option value="1" <?php if($obj->rol_id == "1") echo "selected"?>>
+                                                Administrador</option>
+                                            <option value="2" <?php if($obj->rol_id == "2") echo "selected"?>>Empeado
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="button">
+                                    <input class="btnAgregar" type="submit" value="Actualizar" name="actualizar">
+                                    <input class="btnAgregar" type="button" value="Cerrar" id="close_ac">
+                                </div>
+
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <?php }?>

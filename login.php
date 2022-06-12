@@ -20,6 +20,7 @@
             break;
         }
     }
+    
 
     if(isset($_POST['username']) && isset($_POST['password'])){
         $username = $_POST['username'];
@@ -31,10 +32,12 @@
 
         $row = $query->fetch(PDO::FETCH_NUM);
         
+        
         if($row == true){
             $rol = $row[3];
             
             $_SESSION['rol'] = $rol;
+            
             switch($rol){
                 case 1:
                     header('location: admin.php');
@@ -49,7 +52,10 @@
         }else{
             // no existe el usuario
             array_push($arrayAlert,"Nombre de usuario o contraseña incorrecto");
+            
         }
+        $_SESSION['miNombre'] = $username;
+        
     }
 ?>
 <body>

@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST','localhost');
-define('DB_USER','root');
-define('DB_PASS','');
-define('DB_NAME','sistemasplanillas');
+define('DB_HOST','sql110.epizy.com');
+define('DB_USER','epiz_31941384');
+define('DB_PASS','tnzw01Mx1FAKZx5');
+define('DB_NAME','epiz_31941384_sistemasplanillas');
 // Ahora, establecemos la conexión.
 try
 {

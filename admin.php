@@ -1,4 +1,5 @@
 <?php
+    
     session_start();
 
     if(!isset($_SESSION['rol'])){
@@ -9,6 +10,12 @@
         }
     }
     
+    if(isset($_SESSION['miNombre'])){
+        $nombreUsuario = $_SESSION['miNombre'];
+        
+    }
+    
+    
     $cerrar_sesion="";
     if(isset($_POST['cerrar_sesion'])){
         $cerrar_sesion = $_POST['cerrar_sesion'];
@@ -17,6 +24,7 @@
         header('location: login.php');
         
     };
+    
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +36,7 @@
     <title>Admin</title>
     <link rel="stylesheet" href="./css/sidebar.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/admin.css">
     <!-- Tipografia -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,10 +54,10 @@
             </a>
 
             <ul class="header_nav-links">
-                <li><a href="#"><i class="fa-solid fa-house-user"></i><p>Dashboard</p></a></li>
+                <li><a href="graficas.php"><i class="fa-solid fa-house-user"></i><p>Dashboard</p></a></li>
                 <li><a href="gestionUsuario.php"><i class="fa-solid fa-user"></i><p>Gestion de usuario</p></a></li>
                 <li><a href="gestionEmpleados.php"><i class="fa-solid fa-address-card"></i><p>Gestion de empleados</p></a></li>
-                <li><a href="registroAsistencia.php"><i class="fa-solid fa-calendar-days"></i><p>Registro de asistencia</p></a></li>
+                <li><a href="asistencia.php"><i class="fa-solid fa-calendar-days"></i><p>Registro de asistencia</p></a></li>
                 <li><a href="gestionPlanillas.php"><i class="fa-solid fa-file-excel"></i><p>Gestion de planillas</p></a></li>
                 <li><a href="gestionBoletasPago.php"><i class="fa-solid fa-file-invoice-dollar"></i><p>Gestion de boletas de pago</p></a></li>
                 <div class="header_nav-links_active"></div>
@@ -60,10 +69,13 @@
                             </button></li>
                     </div>
                 </form>
-
             </ul>
         </div>
     </div>
     <!-- Sidebar Final -->
+    <div class="main-admin">
+        <h2>Bienvenido <?php echo  $_SESSION['miNombre'];  ?></h2>
+    </div>
+    
 </body>
 </html>
