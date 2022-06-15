@@ -12,4 +12,4 @@
 tambien se crearon los diseños de formulario de los modulos gestion de usuario y gestion de empleados al igual que el diseño de sus componentes</p>
 
 <h2>Proyecto terminado</h2>
-<h3>Enlace al host http://sistemagestionplanillas.rf.gd/admin.php </h3>
+<h3>Enlace al host sistemagestionplanillas.epizy.com </h3>
